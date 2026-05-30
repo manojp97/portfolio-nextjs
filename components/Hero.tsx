@@ -96,7 +96,7 @@ export default function Hero() {
             <div className="absolute inset-0 bg-cyan-500 blur-3xl opacity-20 rounded-full"></div>
 
             <Image
-              src="/manoj.png"
+              src="/mano.png"
               alt="Manoj"
               width={380}
               height={380}

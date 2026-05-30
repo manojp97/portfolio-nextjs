@@ -2,14 +2,19 @@
 
 import { motion } from "framer-motion";
 import { fadeUp } from "./animations";
+import { ReactNode } from "react";
+
+type SectionWrapperProps = {
+  children: ReactNode;
+  id: string;
+  className?: string;
+};
 
 export default function SectionWrapper({
   children,
   id,
-}: {
-  children: React.ReactNode;
-  id: string;
-}) {
+  className = "",
+}: SectionWrapperProps) {
   return (
     <motion.section
       id={id}
@@ -17,7 +22,7 @@ export default function SectionWrapper({
       initial="hidden"
       whileInView="show"
       viewport={{ once: true, amount: 0.2 }}
-      className="py-24 px-6"
+      className={`py-24 px-6 ${className}`}
     >
       <div className="max-w-6xl mx-auto">{children}</div>
     </motion.section>
